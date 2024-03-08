@@ -9,9 +9,11 @@ type AllType = {
   position: number;
   color: string;
   weight: number
-}
+} 
 
-function compare (top, bottom): AllType {
+type typeSumm = Pick<AllType, 'name' | 'position' |'color' |'weight'>
+
+function compare (top, bottom): typeSumm {
   return {
     name: top.name,
     color: top.color,
@@ -20,4 +22,4 @@ function compare (top, bottom): AllType {
   }
 }
 
-export {};
+export { };
