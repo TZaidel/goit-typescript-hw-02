@@ -11,9 +11,7 @@ type AllType = {
   weight: number
 } 
 
-type typeSumm = Pick<AllType, 'name' | 'position' |'color' |'weight'>
-
-function compare (top, bottom): typeSumm {
+function compare<T extends AllType, U extends AllType> (top: T, bottom: U): AllType {
   return {
     name: top.name,
     color: top.color,
